@@ -2,6 +2,7 @@ import os
 
 import requests
 from dotenv import load_dotenv
+from TokenManager import TokenManager
 
 
 class HeadHunterAdapter:
@@ -27,8 +28,6 @@ class HeadHunterAdapter:
         response_data = response.json()
         new_access_token = response_data['access_token']
         new_refresh_token = response_data['refresh_token']
-        print("Новый access token:", new_access_token)
-        print("Новый refresh token:", new_refresh_token)
 
     @staticmethod
     def getActiveVacanciesIds(employer_id: int, access_token: str):
@@ -38,8 +37,14 @@ class HeadHunterAdapter:
 
         response = requests.get(url, headers=headers)
 
+        vacancies_ids = list()
+
         data = response.json()
-        print(data)
+
+        for x in data['items']:
+            vacancies_ids.append(x['id'])
+
+        return vacancies_ids
 
     @staticmethod
     def getNegotiationsByVacanciesId(vacancy_id: int, access_token: str):
@@ -49,10 +54,14 @@ class HeadHunterAdapter:
 
         response = requests.get(url, headers=headers)
 
+        output = list()
+
         if response.status_code == 200:
             data = response.json()
-            print(data)
 
+            for x in data['items']:
+                output.append({"id": x["id"], "name": x['resume']['first_name']})
+            return output
         else:
             pass
 

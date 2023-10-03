@@ -1,6 +1,5 @@
 import os
 import json
-from HeadHunter import HeadHunterAdapter
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -8,12 +7,25 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class TokenManager:
 
     @staticmethod
-    def upload_tokens():
+    def downloadTokens():
         session_file_path = os.path.join(basedir, "tokens.json")
 
         if os.path.isfile(session_file_path):
             with open(file="tokens.json", mode="r") as tokens:
                 return json.load(tokens)
+
+    @staticmethod
+    def uploadTokens(access_token: str, refresh_token: str):
+
+        token_data = TokenManager.downloadTokens()
+        token_data['access_token'] = access_token
+        token_data['refresh_token'] = refresh_token
+
+        session_file_path = os.path.join(basedir, "tokens.json")
+
+        if os.path.isfile(session_file_path):
+            with open('tokens.json', 'w') as outfile:
+                json.dump(token_data, outfile)
 
     @staticmethod
     def createJsonTokenStruct():
@@ -29,8 +41,3 @@ class TokenManager:
         if not os.path.isfile(session_file_path):
             with open('tokens.json', 'w') as outfile:
                 json.dump(data, outfile)
-
-
-
-    # @staticmethod
-    # def refreshTokens():
