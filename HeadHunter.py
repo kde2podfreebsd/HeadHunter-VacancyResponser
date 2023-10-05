@@ -1,8 +1,10 @@
 import os
+import json
 
 import requests
 from dotenv import load_dotenv
 from TokenManager import TokenManager
+from datetime import datetime, timedelta
 
 
 class HeadHunterAdapter:
@@ -10,24 +12,37 @@ class HeadHunterAdapter:
     @staticmethod
     def refreshAccessToken():
 
+        if os.path.isfile('tokens.json'):
+            with open(file="tokens.json", mode="r") as tokens:
+                tok = json.load(tokens)
+
         load_dotenv()
 
         data = {
             'grant_type': 'refresh_token',
             'client_id': os.getenv("client_id"),
             'client_secret': os.getenv("client_secret"),
-            'refresh_token': 'Ваш_refresh_токен',
+            'refresh_token': tok['refresh_token'],
         }
 
         response = requests.post('https://hh.ru/oauth/token', data=data)
 
         if response.status_code == 400:
-            # обработать {"error": "invalid_grant", "error_description": "token not expired"}
-            return
+            pass
 
-        response_data = response.json()
-        new_access_token = response_data['access_token']
-        new_refresh_token = response_data['refresh_token']
+        else:
+
+            response_data = response.json()
+            new_access_token = response_data['access_token']
+            new_refresh_token = response_data['refresh_token']
+            expires_in = response_data['expires_in']
+            new_date = datetime.now() + timedelta(seconds=expires_in)
+
+            TokenManager.uploadTokens(
+                access_token=new_access_token,
+                refresh_token=new_refresh_token,
+                expires_in=str(new_date)
+            )
 
     @staticmethod
     def getActiveVacanciesIds(employer_id: int, access_token: str):
@@ -73,5 +88,6 @@ class HeadHunterAdapter:
         url = f"https://api.hh.ru/negotiations/{negotiation_id}/messages"
 
         response = requests.post(url, headers=headers, data=data)
+
         if response.status_code == 201:
-            print("sended")
+            return True

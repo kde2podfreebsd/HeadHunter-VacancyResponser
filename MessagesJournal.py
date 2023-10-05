@@ -25,4 +25,3 @@ class MessageJournalAdapter:
 
         with open(SENT_MESSAGES_FILE, "w") as file:
             json.dump(sent_messages, file, indent=4)
-

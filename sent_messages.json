@@ -1,6 +1,78 @@
 {
     "message_journal": [
         {
+            "name": null,
+            "id": "3478029051",
+            "vacancy_id": "86786586",
+            "is_sent": true
+        },
+        {
+            "name": "\u041b\u044e\u0431\u043e\u0432\u044c",
+            "id": "3477927387",
+            "vacancy_id": "86786586",
+            "is_sent": true
+        },
+        {
+            "name": "\u0410\u043c\u0438\u043d\u0430",
+            "id": "3477379083",
+            "vacancy_id": "86786586",
+            "is_sent": true
+        },
+        {
+            "name": "\u0421\u0430\u0431\u0440\u0438\u043d\u0430",
+            "id": "3477287508",
+            "vacancy_id": "86786586",
+            "is_sent": true
+        },
+        {
+            "name": "\u041c\u0430\u0440\u0438\u044f",
+            "id": "3477248019",
+            "vacancy_id": "86786586",
+            "is_sent": true
+        },
+        {
+            "name": "\u0415\u043b\u0435\u043d\u0430",
+            "id": "3477064053",
+            "vacancy_id": "86786586",
+            "is_sent": true
+        },
+        {
+            "name": "\u042f\u043d\u0430",
+            "id": "3475550573",
+            "vacancy_id": "86786586",
+            "is_sent": true
+        },
+        {
+            "name": "\u041a\u0438\u0440\u0438\u043b\u043b",
+            "id": "3475363409",
+            "vacancy_id": "86786586",
+            "is_sent": true
+        },
+        {
+            "name": "\u0415\u043a\u0430\u0442\u0435\u0440\u0438\u043d\u0430",
+            "id": "3474910595",
+            "vacancy_id": "86786586",
+            "is_sent": true
+        },
+        {
+            "name": "\u0415\u043b\u0438\u0437\u0430\u0432\u0435\u0442\u0430",
+            "id": "3474814189",
+            "vacancy_id": "86786586",
+            "is_sent": true
+        },
+        {
+            "name": "Viola",
+            "id": "3474376111",
+            "vacancy_id": "86786586",
+            "is_sent": true
+        },
+        {
+            "name": "\u042f\u043d\u0430",
+            "id": "3473240596",
+            "vacancy_id": "86786586",
+            "is_sent": true
+        },
+        {
             "name": "\u0418\u0440\u0438\u043d\u0430",
             "id": "3472322739",
             "vacancy_id": "86786586",
@@ -43,81 +115,9 @@
             "is_sent": true
         },
         {
-            "name": "\u041e\u043b\u044c\u0433\u0430",
-            "id": "3470994721",
-            "vacancy_id": "86786586",
-            "is_sent": true
-        },
-        {
-            "name": "\u0423\u043b\u044c\u044f\u043d\u0430",
-            "id": "3470777183",
-            "vacancy_id": "86786586",
-            "is_sent": true
-        },
-        {
-            "name": "\u041f\u043e\u043b\u0438\u043d\u0430",
-            "id": "3470295152",
-            "vacancy_id": "86786586",
-            "is_sent": true
-        },
-        {
-            "name": "\u0418\u0433\u043e\u0440\u044c",
-            "id": "3470290050",
-            "vacancy_id": "86786586",
-            "is_sent": true
-        },
-        {
-            "name": "\u0418\u0440\u0438\u043d\u0430",
-            "id": "3470273829",
-            "vacancy_id": "86786586",
-            "is_sent": true
-        },
-        {
-            "name": "\u0410\u043d\u043d\u0430",
-            "id": "3467475004",
-            "vacancy_id": "86786586",
-            "is_sent": true
-        },
-        {
-            "name": "\u041a\u0440\u0438\u0441\u0442\u0438\u043d\u0430",
-            "id": "3467133184",
-            "vacancy_id": "86786586",
-            "is_sent": true
-        },
-        {
-            "name": "\u042e\u043b\u0438\u044f",
-            "id": "3466790434",
-            "vacancy_id": "86786586",
-            "is_sent": true
-        },
-        {
-            "name": "\u0414\u0438\u043d\u0430",
-            "id": "3466493667",
-            "vacancy_id": "86786586",
-            "is_sent": true
-        },
-        {
-            "name": "\u0415\u043a\u0430\u0442\u0435\u0440\u0438\u043d\u0430",
-            "id": "3474910595",
-            "vacancy_id": "86786586",
-            "is_sent": true
-        },
-        {
-            "name": "\u0415\u043b\u0438\u0437\u0430\u0432\u0435\u0442\u0430",
-            "id": "3474814189",
-            "vacancy_id": "86786586",
-            "is_sent": true
-        },
-        {
-            "name": "Viola",
-            "id": "3474376111",
-            "vacancy_id": "86786586",
-            "is_sent": true
-        },
-        {
-            "name": "\u042f\u043d\u0430",
-            "id": "3473240596",
-            "vacancy_id": "86786586",
+            "name": "\u0410\u0440\u0442\u0435\u043c",
+            "id": "3465838142",
+            "vacancy_id": 86786586,
             "is_sent": true
         }
     ]
