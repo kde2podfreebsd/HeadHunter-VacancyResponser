@@ -97,4 +97,18 @@ python main.py
 ```
 
 
-
+#### Шаблон tokens.json и .env
+##### .env
+```
+client_id=
+client_secret=
+redirect_uri=https://
+```
+##### tokens.json
+```json
+{
+  "access_token": "",
+  "refresh_token": "",
+  "expires_in": "2023-10-19 15:24:03.064206"
+}
+```
